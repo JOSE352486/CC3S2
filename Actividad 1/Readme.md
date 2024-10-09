@@ -45,7 +45,7 @@ Esto instalará la versión predeterminada de WSL y una distribución de Linux (
 2. Acceder al Entorno WSL: Abrir la terminal de Windows (Command Prompt o PowerShell) y ejecutar:
    ```bash
    wsl
-![wsl](https://github.com/al-2100/CC3S2/blob/main/Actividad%201/wsl.png)
+
 
 A continuación, se presenta la lista de pasos a seguir, extraída de la actividad original, junto con explicaciones adicionales.
 
@@ -150,7 +150,7 @@ Para iniciar el proyecto de Node.js, seguimos estos pasos:
         npm test
       ```
   
-![npmtest](https://github.com/al-2100/CC3S2/blob/main/Actividad%201/npmtest.png)
+
 
 ## 2. Pipeline CI/CD
 
@@ -254,7 +254,7 @@ Docker permite contenerizar la aplicación y desplegarla en diferentes entornos 
         docker run -p 3000:3000 devops-practice
         ```
 
-        ![dockerrun](https://github.com/al-2100/CC3S2/blob/main/Actividad%201/dockerrun.png)
+        
 
 2. **Automatizar el despliegue con GitHub Actions:**
 
@@ -299,7 +299,7 @@ Docker permite contenerizar la aplicación y desplegarla en diferentes entornos 
 
     - Abrimos un navegador web y accedemos a [http://localhost:3000](http://localhost:3000) para verificar que la aplicación esté funcionando.
 
-  ![screenshot1](https://github.com/al-2100/CC3S2/blob/main/Actividad%201/screenshot1.png)
+
 ## 3. Automatización
 
 ### 3.1 Automatiza la Configuración y Gestión del Entorno Local usando Docker Compose
