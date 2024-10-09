@@ -44,13 +44,7 @@ La ingeniería de plataformas mejora la eficiencia y experiencia del desarrollad
  
  Sin embargo, a diferencia de la documentación anterior, en esta ocasión solo incluiré capturas de la configuración del entorno, ya que los pasos y explicaciones son los mismos y están detalladamente descritos en la documentación de la actividad 1.
 
- ![config](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/config.png?raw=true)
 
- ![app](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/app.png?raw=true)
-
- ![app-test](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/app-test.png?raw=true)
- 
- ![package](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/package.png?raw=true)
 ## 2. Implementación de DevSecOps
 
 ### Integración de Seguridad
@@ -119,7 +113,7 @@ Hay que señalar que se agrega `working-directory` para configurar el directorio
    docker build -t devops-practice .
    docker run -p 3000:3000 devops-practice
    ```
-![docker](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/docker.png?raw=true)
+
 ### Automatiza la gestión de contenedores usando Docker Compose
 
 1. Crear un archivo `docker-compose.yml`:
@@ -138,7 +132,7 @@ Hay que señalar que se agrega `working-directory` para configurar el directorio
    ```bash
    docker-compose up --build -d
    ```
-![docker2](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/docker2.png?raw=true)
+
 
 ## 4. Implementación de Observabilidad
 
@@ -178,8 +172,8 @@ Hay que señalar que se agrega `working-directory` para configurar el directorio
        ports:
          - "3001:3001"
    ```
-   3. Correr la aplicación usando Docker Compose:
-   ![grafana](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/grafana.png?raw=true)
+   3. Correr la aplicación usando Docker Compose.
+
 
 
 ## 5. Evaluación y comentarios de la experiencia
@@ -197,38 +191,6 @@ Al implementar DevSecOps en una aplicación web sencilla en Node.js, reflexionam
 
 En conclusión, cada componente del flujo de trabajo DevSecOps contribuye a un proceso de desarrollo más seguro, eficiente y visible. Cada paso que dimos nos ayudó a mejorar la seguridad, reducir errores y trabajar de manera más eficiente. Esto nos enseñó que, al integrar todos estos componentes, podemos crear un proceso de desarrollo que sea realmente efectivo y seguro.
 
-## 6. Correciones y consideraciones finales
-
-Posterior a la experiencia de la actividad y al subirla finalizada a github, se realizaron las siguientes observaciones y ajustes en este orden:
-
-1. Se observa que el workflow falla
-
-   ![directorio](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/directorio.png?raw=true)
-
-2. Se agregó la configuración para los directorios en el flujo de trabajo en `.github/workflows/ci.yml`, la documentación del paso 2 ya fue actualizada.
-3. Se observa que el workflow no pasa de `run tests` a pesar que pasa el test
-
-   ![test](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/test.png?raw=true)
-
-4. Tras muchos intentos se modifica app.js y app.test.js para que se cierre correctamente el test
-
-   ![test2](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/test2.png?raw=true)
-   
-   ![app2](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/app2.png?raw=true)
-
-5. Funciona
-   
-   ![fix](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/fix.png?raw=true)
-  
-
-6. Al intentar acceder a Grafana mediante localhost:3001, no hay conexión. Después de investigar se detecta que la causa es que Grafana utiliza el puerto 3000 como predeterminado, la solución más rápida en esta actividad es intercambiar los puertos de la app y Grafana.
-   Resultados:
-
-  ![localhost3000](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/localhost3000.png?raw=true)
-
-  ![localhost3001](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/localhost3001.png?raw=true)
-
-  ![localhost9090](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/localhost9090.png?raw=true)
 
 # Ejercicios adicionales
 ## Ejercicio 1: Integración continua y DevSecOps
@@ -261,14 +223,7 @@ Utilizamos `devops-practice` pues ya es un pipeline de CI/CD que incluye pruebas
   }  
 }
 ```
-2. Hacemos commit y push para que GitHub Actions se active
-3. Observamos el workflow
 
-	![vulnerabilidad](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/vulnerabilidad.png?raw=true)
-
-4. Revisamos detalles
-
-	![workflow-ej1](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/workflow-ej1.png?raw=true)
 
 #### Evaluación:
 
@@ -322,18 +277,7 @@ Utilizamos `devops-practice` pues ya es un pipeline de CI/CD que incluye pruebas
 		  - DEBUG=true  # Habilitar debugging
 		```
 
-		- Despiegue en desarrollo:
-
-			![debug](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/debug.png?raw=true)
-
-		- Despliegue en producción:
-
-			![[production.png]](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/production.png?raw=true)
-
-	  - Introduce un cambio en la configuración (como cambiar el puerto o una variable de entorno) y despliega nuevamente.
-		 - Cambiamos el puerto a 4000
-
-			 ![[4000.png]](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/4000.png?raw=true)
+		
 
 3. **Evaluación**:
    - Compara la consistencia entre los entornos. ¿Cómo asegura IaC que ambos entornos se mantengan alineados?
@@ -367,24 +311,8 @@ app.get('/metrics', async (req, res) => {
     }, 3000);  // Retraso de 3 segundos  
 });
 ```
- - Se configura una alerta en Grafana que se activen cuando el promedio de respuesta en `metrics` sea mayor a 0.2s en un minuto. A continuación los pasos:
-	 1. Agregamos a **Prometheus** como data source en **Grafana**
-		 ![[datasource.png]](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/datasource.png?raw=true)
-		 
-		 ![[datasource2.png]](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/datasource2.png?raw=true)
-		 
-	2. Creamos un dashboard con el data source y agregamos la query:
-		`histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[1m])) by (le, route))`
-		
-		![[dashboard3.png]](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/dashboard3.png?raw=true)
-		
-	3. Creamos la alerta en el panel
-		![[alerta.png]](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/alerta.png?raw=true)
-		![[alerta2.png]](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/alerta2.png?raw=true)
-		
-	4. Observamos nuestro dashboard antes y después de introducir la falla a ser detectada
-		
-		![[dashboard4.png]](https://github.com/al-2100/CC3S2/blob/main/Actividad%202/imagenes/dashboard4.png?raw=true)
+ - Se configura una alerta en Grafana que se activen cuando el promedio de respuesta en `metrics` sea mayor a 0.2s en un minuto. 
+	
 		
 3. **Evaluación**:
    - Discute cómo la observabilidad permite identificar problemas que no serían evidentes con un monitoreo tradicional.
