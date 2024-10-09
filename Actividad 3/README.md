@@ -47,12 +47,12 @@ Usa `git log` para ver el historial de commits. Esto te permitirá revisar cambi
 Ejemplo de salida:
 
 ```
-* f9d7baf 2 hours ago ("Jorge Barriga") Initial commit
-* c4e50a9 1 day ago ("Jorge Barriga") Added new feature
+* f9d7baf 2 hours ago ("Ismael Llanos") Initial commit
+* c4e50a9 1 day ago ("Ismael Llanos") Added new feature
 |\
-| * d3d2e2a 2 days ago ("Alonso Barriga") Merged branch 'feature'
+| * d3d2e2a 2 days ago ("Ismael Llanos") Merged branch 'feature'
 |/
-* e1d9c0a 3 days ago ("Jorge Barriga") Updated README.md
+* e1d9c0a 3 days ago ("Ismael Llanos") Updated README.md
 ```
 
 ## 6. git branch: Entendiendo los conceptos básicos de Git branch
