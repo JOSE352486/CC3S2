@@ -386,11 +386,4 @@ Después de completar la actividad y subirla finalizada a GitHub, se realizaron 
    
    ![test-actividad1](https://github.com/user-attachments/assets/5f501760-10fd-4593-b310-115921900e86)
 
-3. Se modifica app.js y app.test.js para que se cierre correctamente el test
 
-   ![test2](https://github.com/user-attachments/assets/11e8262c-1bc0-4834-b2a8-350e89023f77)
-   ![app2](https://github.com/user-attachments/assets/a658aa70-abc1-4b76-99df-71de07c927de)
-   
-4. Funciona
-   
-   ![fix-actividad1](https://github.com/user-attachments/assets/e2809c7e-32b7-430e-90de-47d00cd3ae23)
